@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .product { border: 1px solid #ddd; padding: 10px; margin: 10px; display: inline-block; }
+        .button { background-color: #28a745; color: white; padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My E-Commerce Store</h1>
+    
+    <div class="product">
+        <h2>Product 1</h2>
+        <p>Price: $10</p>
+        <button class="button" onclick="buyNow(10)">Buy Now</button>
+    </div>
+    
+    <div class="product">
+        <h2>Product 2</h2>
+        <p>Price: $20</p>
+        <button class="button" onclick="buyNow(20)">Buy Now</button>
+    </div>
+    
+    <script>
+        function buyNow(amount) {
+            window.location.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=youremail@example.com&amount=${amount}&currency_code=USD&item_name=Product`;
+        }
+    </script>
+</body>
+</html>
