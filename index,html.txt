@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple E-Commerce Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .product {
+      border: 1px solid #ddd;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 15px;
+      display: inline-block;
+      width: 200px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .product h2 {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+    .product p {
+      margin: 10px 0;
+      font-size: 1em;
+      color: #666;
+    }
+    .button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My E-Commerce Store</h1>
+  
+  <!-- Product 1 -->
+  <div class="product">
+    <h2>Product 1</h2>
+    <p>Price: $10</p>
+    <button class="button" onclick="buyNow(10)">Buy Now</button>
+  </div>
+  
+  <!-- Product 2 -->
+  <div class="product">
+    <h2>Product 2</h2>
+    <p>Price: $20</p>
+    <button class="button" onclick="buyNow(20)">Buy Now</button>
+  </div>
+  
+  <script>
+    // Replace "youremail@example.com" with your actual PayPal merchant email.
+    function buyNow(amount) {
+      window.location.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=youremail@example.com&amount=${amount}&currency_code=USD&item_name=Product`;
+    }
+  </script>
+</body>
+</html>
